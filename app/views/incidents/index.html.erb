@@ -1,0 +1,16 @@
+<h1>
+  Incidents
+</h1>
+<ul>
+  <% @incidents.each do |incident| %>
+    <li>
+      <h4><%= incident.title %></h4>
+      <p><%= incident.description %></p>
+      <p>
+        <span><strong>Severity:</strong> <%= incident.severity %></span> | 
+        <span><strong>Submitted by:</strong> <%= incident.creator_name %></span> |
+        <span><strong>Status:</strong> <%= incident.status %> </span>
+      <p>
+    </li>
+  <% end %>
+</ul>
